@@ -48,12 +48,11 @@ All jobs run on GitHub-hosted `ubuntu-latest` runners.
 
 ## Deployment
 
-The site is built in GitHub Actions, not by Cloudflare. `cf-pages.yml` runs
-`npm ci` and `npm run docs:build` on Node.js 24, then uploads
-`docs/.vitepress/dist` with Wrangler to the Cloudflare Pages project
-`nebulalab-docs` (branch `main`), so Cloudflare needs no access to this
-repository. There is no scheduled rebuild; the home page looks up release
-information in the browser.
+The site is built in GitHub Actions. `cf-pages.yml` runs `npm ci` and
+`npm run docs:build` on Node.js 24, then uploads `docs/.vitepress/dist` with
+Wrangler to the Cloudflare Pages project `nebulalab-docs` (branch `main`); this
+deploy path does not rely on Cloudflare building from the repository. There is
+no scheduled rebuild; the home page looks up release information in the browser.
 
 ## Legacy URLs
 
@@ -101,9 +100,12 @@ existing personal site wholesale. Nothing syncs it automatically. To update it:
    `node scripts/build-legacy-user-pages.mjs out/legacy-user-pages`. The script
    only writes to a new directory inside the checkout and refuses to overwrite
    existing output, so use a fresh directory for a repeat local build.
-2. Commit its contents to `TshyGO/tshygo.github.io`, and update that
-   repository's README, which records the run and source commit it was
-   generated from.
+2. Review the artifact before publishing it: both `index.html` files under
+   `NebulaLab-Docs/` and `NebulaLab-Docs-compat-check/` must be identical to
+   `redirect/index.html` on `main`, and `404.html` to
+   `redirect/user-site-404.html`. Then commit its contents to
+   `TshyGO/tshygo.github.io`, and update that repository's README, which records
+   the run and source commit it was generated from.
 3. In a browser, open
    `https://tshygo.github.io/NebulaLab-Docs-compat-check/manual/workflow?from=legacy#start`
    to probe the fallback, then real old `/NebulaLab-Docs/` root and deep links.
