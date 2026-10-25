@@ -95,12 +95,15 @@ independently of this repository. That repository holds only these
 compatibility routes; publish there only while that is true, and never replace an
 existing personal site wholesale. Nothing syncs it automatically. To update it:
 
-1. Take the `legacy-user-pages` artifact from a reviewed `Docs Compatibility` run.
-   The workflow builds it with
+1. Once the change is merged, run `Docs Compatibility` manually on `main` and take
+   the `legacy-user-pages` artifact from that run, so the published shell matches
+   `main` rather than an unmerged pull request. The workflow builds it with
    `node scripts/build-legacy-user-pages.mjs out/legacy-user-pages`. The script
    only writes to a new directory inside the checkout and refuses to overwrite
    existing output, so use a fresh directory for a repeat local build.
-2. Commit its contents to `TshyGO/tshygo.github.io`.
+2. Commit its contents to `TshyGO/tshygo.github.io`, and update that
+   repository's README, which records the run and source commit it was
+   generated from.
 3. In a browser, open
    `https://tshygo.github.io/NebulaLab-Docs-compat-check/manual/workflow?from=legacy#start`
    to probe the fallback, then real old `/NebulaLab-Docs/` root and deep links.
