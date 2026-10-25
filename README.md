@@ -42,7 +42,7 @@ node --test test/legacy-redirect.test.mjs # redirect shell tests
 | Redirect legacy Pages URL to nebulalab.app (`deploy.yml`) | Push to `main` that changes `redirect/**` or `deploy.yml`; manual | Publishes `redirect/` to this repository's GitHub Pages site | None |
 | Docs Compatibility (`docs-compatibility.yml`) | Every pull request; manual | Redirect tests, `npm ci`, full build; uploads the `docs-site` and `legacy-user-pages` artifacts | None |
 | AI PR Review (`ai-pr-review.yml`) | Pull request opened, reopened, marked ready or pushed; `/review` comment | Three-lane AI review posted as PR comments | `PR_AGENT_LANE_{A,B,C}_KEY`, `PR_AGENT_LANE_{A,B,C}_API_BASE` |
-| Claude Code Review (`claude-review.yml`) | Pull request to `main` (only when enabled); `@claude` comment | Claude review of documentation PRs | `CLAUDE_CODE_OAUTH_TOKEN` |
+| Claude Code Review (`claude-review.yml`) | Pull request to `main` (only when enabled) | Claude review of documentation PRs | `CLAUDE_CODE_OAUTH_TOKEN` |
 
 All jobs run on GitHub-hosted `ubuntu-latest` runners.
 
@@ -135,8 +135,8 @@ confirm Docs Compatibility passed before merging.
   down instead of cancelling it.
 - **Claude Code Review** reviews automatically only when the Actions variable
   `CLAUDE_REVIEW_ENABLED` is `true`. It is not set for this repository, and
-  recent runs show the automatic job skipped. A PR comment that mentions
-  `@claude` starts an on-demand run.
+  recent runs show the automatic job skipped. There is no `@claude` comment
+  trigger.
 - `.coderabbit.yaml` turns off CodeRabbit's automatic reviews and chat replies.
 
 Manual pages follow the workflow in [`docs-writing/`](docs-writing/README.md):
