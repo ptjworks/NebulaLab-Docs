@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Page not found</title>
+<meta name="robots" content="noindex">
+<script>
+  (function () {
+    var prefixes = ['/NebulaLab-Docs', '/NebulaLab-Docs-compat-check'];
+    var path = window.location.pathname;
+    var prefix = prefixes.find(function (value) {
+      return path === value || path.indexOf(value + '/') === 0;
+    });
+    if (!prefix) return;
+    var target = new URL('https://nebulalab.app/');
+    target.pathname = path.slice(prefix.length) || '/';
+    target.search = window.location.search;
+    target.hash = window.location.hash;
+    window.location.replace(target.href);
+  })();
+</script>
+</head>
+<body>
+<h1>404 - Page not found</h1>
+<p>No page is published at this address.</p>
+<p>If you are looking for Nebula Lab documentation, visit <a href="https://nebulalab.app/">nebulalab.app</a>.</p>
+<noscript><p>Automatic forwarding of legacy documentation links requires JavaScript.</p></noscript>
+</body>
+</html>

@@ -40,6 +40,9 @@ repository. Never recreate `TshyGO/NebulaLab-Docs`: that would break GitHub's
 repository redirects. The personal site's root 404 shell only redirects the
 exact Docs namespace and its compatibility-check namespace, leaving unrelated
 personal Pages paths alone.
+The personal Pages repository must be absent or dedicated to this compatibility
+site before publication; never replace an existing personal site wholesale.
+Unrelated missing URLs receive a generic 404 page, with no automatic forwarding.
 
 `Docs Compatibility` runs browser-script routing tests and a complete VitePress
 build on a remote hosted runner, then produces the static personal Pages
@@ -47,6 +50,10 @@ artifact with `node scripts/build-legacy-user-pages.mjs out/legacy-user-pages`.
 Verify `/NebulaLab-Docs-compat-check/manual/workflow?from=legacy#start` before
 transfer, and the actual old `/NebulaLab-Docs/` root/deep links afterwards.
 Both must reach the canonical site with path, query and fragment retained.
+Automatic forwarding requires JavaScript; browsers with scripts disabled receive
+a manual canonical-site link instead of a timed redirect that drops URL state.
+The artifact builder intentionally requires a fresh output directory and refuses
+to remove or overwrite existing output; use a new directory for a repeat build.
 
 The AI review caller pins the same immutable central SHA in both fields, with
 both repository identities registered. Existing Lane and Cloudflare credential
