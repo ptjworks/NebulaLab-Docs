@@ -5,20 +5,21 @@
 <title>Nebula Lab 文档已迁移</title>
 <link rel="canonical" href="https://nebulalab.app/">
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="1; url=https://nebulalab.app/">
 <script>
-  // GitHub Pages serves this file for every unknown path under /NebulaLab-Docs/.
-  // Carry the original path over to the new domain so deep links survive.
   (function () {
-    var prefix = '/NebulaLab-Docs';
+    var prefixes = ['/NebulaLab-Docs', '/NebulaLab-Docs-compat-check'];
     var path = window.location.pathname;
-    if (path.indexOf(prefix) === 0) {
-      path = path.slice(prefix.length);
-    }
-    if (path.charAt(0) !== '/') {
-      path = '/' + path;
-    }
-    window.location.replace('https://nebulalab.app' + path + window.location.search + window.location.hash);
+    var prefix = prefixes.find(function (value) {
+      return path === value || path.indexOf(value + '/') === 0;
+    });
+    if (!prefix) return;
+    // Assign URL components on a fixed origin, including encoded paths. Never
+    // interpret the incoming suffix as an absolute or protocol-relative URL.
+    var target = new URL('https://nebulalab.app/');
+    target.pathname = path.slice(prefix.length) || '/';
+    target.search = window.location.search;
+    target.hash = window.location.hash;
+    window.location.replace(target.href);
   })();
 </script>
 </head>

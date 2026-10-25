@@ -5,7 +5,24 @@
 <title>Nebula Lab 文档已迁移</title>
 <link rel="canonical" href="https://nebulalab.app/">
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=https://nebulalab.app/">
+<meta http-equiv="refresh" content="5; url=https://nebulalab.app/">
+<script>
+  (function () {
+    var prefixes = ['/NebulaLab-Docs', '/NebulaLab-Docs-compat-check'];
+    var path = window.location.pathname;
+    var prefix = prefixes.find(function (value) {
+      return path === value || path.indexOf(value + '/') === 0;
+    });
+    if (!prefix) return;
+    // Assign URL components on a fixed origin, including encoded paths. Never
+    // interpret the incoming suffix as an absolute or protocol-relative URL.
+    var target = new URL('https://nebulalab.app/');
+    target.pathname = path.slice(prefix.length) || '/';
+    target.search = window.location.search;
+    target.hash = window.location.hash;
+    window.location.replace(target.href);
+  })();
+</script>
 </head>
 <body>
 <p>Nebula Lab 文档站已迁至 <a href="https://nebulalab.app/">https://nebulalab.app/</a>，正在跳转……</p>
