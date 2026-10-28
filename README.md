@@ -114,7 +114,7 @@ existing personal site wholesale. Nothing syncs it automatically. To update it:
    (with a 404 status for deep links), because forwarding runs in JavaScript.
 
 The AI review caller (`ai-pr-review.yml`) pins the same full
-[TshyGO/ci-central](https://github.com/TshyGO/ci-central) commit SHA in its
+[ptjworks/ci-central](https://github.com/ptjworks/ci-central) commit SHA in its
 `uses:` reference and in `central_workflow_sha`; keep the two identical when
 updating the pin. ci-central has review configurations registered for both the
 `TshyGO/NebulaLab-Docs` and `ptjworks/NebulaLab-Docs` identities.
@@ -127,7 +127,7 @@ branch deletion are blocked. No status checks are required by the ruleset, so
 confirm Docs Compatibility passed before merging.
 
 - **AI PR Review** calls the reusable workflow
-  `TshyGO/ci-central/.github/workflows/pr-review.yml`. Each round updates one
+  `ptjworks/ci-central/.github/workflows/pr-review.yml`. Each round updates one
   status comment and one comment per lane (A, B, C) and takes roughly 5–15
   minutes. Opening or pushing to a pull request starts a round on its own. An
   owner, member or collaborator can comment `/review` to request one; if a review
