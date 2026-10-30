@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact
-description: Contact Nebula Lab through official GitHub Issues or support@nebulalab.io.
+description: Contact Nebula Lab through official GitHub Issues.
 ---
 
 <script setup>

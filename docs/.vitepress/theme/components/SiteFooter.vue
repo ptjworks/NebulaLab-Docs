@@ -8,7 +8,7 @@ const groups = [
   { title: '产品与功能', en: 'Product & features', links: [['软件介绍', '/products/#overview'], ['实验数据收集', '/products/#experiment-data'], ['模拟数据收集', '/products/#simulation-data'], ['文献数据收集', '/products/#literature-data']] },
   { title: '全链路数据', en: 'Connected data', links: [['数据管理', '/manual/data-management'], ['数据中心', '/products/#data-center-platform'], ['LLM模型', '/products/#llm-rag'], ['材料智能体', '/products/#ml-agent']] },
   { title: '帮助中心', en: 'Help', links: [['学习资源', '/tutorials/'], ['社区', '/community/']] },
-  { title: '下载与联系我们', en: 'Download & contact', links: [['下载', '/download/'], ['GitHub Issues · 官方反馈', 'https://github.com/TshyGO/NebulaLab-Releases/issues'], ['Support@nebulalab.io', 'mailto:support@nebulalab.io']] }
+  { title: '下载与联系我们', en: 'Download & contact', links: [['下载', '/download/'], ['GitHub Issues · 官方反馈', 'https://github.com/TshyGO/NebulaLab-Releases/issues']] }
 ]
 </script>
 <template>

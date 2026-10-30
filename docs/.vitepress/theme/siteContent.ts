@@ -37,8 +37,7 @@ export const pageContent: Record<PageKind, { eyebrow: string; title: string; int
     { id: 'ml-agent', title: 'ML材料智能体', text: '从数据中学习规律，开发与验证领域模型，支持性能预测、虚拟筛选、多目标优化与逆向设计。', points: ['性能预测与模型验证', '候选材料筛选和方案设计', '真实实验再验证与数据回流'], badge: '规划中', href: '/manual/ml-agent', action: '阅读建设方向' }
   ] },
   contact: { eyebrow: 'CONTACT / 联系我们', title: '让问题与建议，找到我们。', intro: '软件问题、使用建议与合作咨询，可通过以下官方渠道联系 Nebula Lab。', sections: [
-    { id: 'github', title: 'GitHub Issues · 官方反馈渠道', text: '提交软件问题与功能建议，查看已有讨论和处理进展。提供软件版本、复现步骤及必要的错误信息，方便定位问题。', points: ['报告问题与提出建议', '查询公开反馈进展', '使用脱敏样例说明问题'], href: 'https://github.com/TshyGO/NebulaLab-Releases/issues', action: '前往 GitHub Issues' },
-    { id: 'email', title: '邮箱 · support@nebulalab.io', text: '如需邮件沟通，请联系 support@nebulalab.io，并简要说明你的使用场景、问题和联系方式。', points: ['使用支持与产品咨询', '邮件主题写明问题或需求', '附上版本与相关操作信息'], href: 'mailto:support@nebulalab.io', action: '发送邮件' }
+    { id: 'github', title: 'GitHub Issues · 官方反馈渠道', text: '提交软件问题与功能建议，查看已有讨论和处理进展。提供软件版本、复现步骤及必要的错误信息，方便定位问题。', points: ['报告问题与提出建议', '查询公开反馈进展', '使用脱敏样例说明问题'], href: 'https://github.com/TshyGO/NebulaLab-Releases/issues', action: '前往 GitHub Issues' }
   ] },
   support: { eyebrow: 'HELP CENTER / 帮助中心', title: '按模块学习，按模板复用。', intro: '学习资源提供各模块操作步骤，社区介绍数据处理模板及使用方法。现阶段可阅读文档，教学视频将在准备完成后补充。', sections: [
     { id: 'learning', title: '学习资源 · 模块操作文档与视频', text: '按实验、模拟、文献数据收集、数据中心、LLM+RAG 与 ML 材料智能体查看文档。实验数据收集下设七个操作章节，与同名视频资源相互关联；视频待拍摄。', points: ['六类功能与七个实验操作章节', '操作手册与学习资源互相对应', '教学视频待拍摄'], href: '/tutorials/', action: '查看学习资源' },
