@@ -1,0 +1,80 @@
+/* Homepage brief v2: purpose, four examples, then product capabilities. */
+html { color-scheme: light; }
+.VPNavBar { background: #ee7b27 !important; }
+.VPLocalSearchBox .search-actions { display: none !important; }
+.VPLocalSearchBox input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.overview-hero { padding: 55px 0 48px; background: linear-gradient(180deg, #fff 55%, #fff8f1); }
+.overview-hero > .site-container > .eyebrow { text-align: center; margin-bottom: 10px; }
+.overview-hero h1 { text-align: center; margin: 0; color: #202c3b; font-size: clamp(36px, 4.5vw, 56px); font-weight: 650; letter-spacing: -2px; line-height: 1.3; }
+.overview-purpose { text-align: center; color: #a74412; font-size: clamp(18px, 2.2vw, 27px); font-weight: 600; margin: 16px 0 12px; line-height: 1.6; }
+.overview-intro { text-align: center; margin: 0 auto 35px; max-width: 750px; font-size: 14px; color: var(--research-muted); line-height: 1.9; }
+.flow-overline { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid #efcfb5; padding-bottom: 13px; margin-bottom: 24px; }
+.flow-overline > span:first-child { font-size: 17px; font-weight: 600; }
+.flow-overline > span:last-child { font-size: 11px; color: #a65225; padding: 5px 14px; background: #fff0e0; border-radius: 20px; }
+.research-flow { display: grid; grid-template-columns: minmax(0, 1fr) 190px; gap: 24px; align-items: stretch; }
+.flow-stages { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; align-items: stretch; }
+.flow-stage { position: relative; display: flex; flex-direction: column; align-items: center; padding: 18px 8px 15px; border: 1px solid #ebd8c8; background: white; border-radius: 6px; transition: border-color .2s, box-shadow .2s; }
+.flow-stage:hover { border-color: #e87931; box-shadow: 0 5px 18px #a44e1210; }
+.flow-order { color: #bd9a7f; font: 10px monospace; align-self: flex-start; margin-bottom: 8px; }
+.flow-stage > svg { width: 30px; height: 30px; color: #cb5f23; margin-bottom: 13px; }
+.flow-stage h2 { margin: 0 0 6px; font-weight: 600; font-size: 16px; white-space: nowrap; }
+.flow-en { font-size: 7px; letter-spacing: .04em; color: #927a69; }
+.flow-stage ul { align-self: stretch; list-style: none; padding: 15px 0 0; margin: 14px 0 0; border-top: 1px solid #f0e5db; display: grid; gap: 11px; }
+.flow-stage li { font-size: 10px; line-height: 1.65; display: flex; gap: 4px; color: #636a73; }
+.flow-stage li svg { width: 11px; height: 15px; color: #d17a45; }
+.flow-arrow { position: absolute; top: 48%; right: -15px; z-index: 1; font-size: 20px; color: #d7834e; }
+.flow-agent { position: relative; display: flex; flex-direction: column; align-items: center; border-radius: 7px; padding: 18px 14px; border: 1px dashed #d9986b; background: #fff2e5; }
+.flow-agent > svg { width: 33px; height: 33px; color: #bf5820; margin-top: 18px; }
+.flow-agent h2 { font-size: 20px; font-weight: 600; margin: 13px 0 10px; }
+.flow-agent p { font-size: 11px; color: #745b49; text-align: center; line-height: 2; margin: 0; }
+.flow-agent-note { font-size: 9px; margin-top: auto; padding-top: 16px; color: #a34e1f; text-align: center; }
+.flow-return { width: calc(100% - 214px); margin: 15px 0 10px; border: 1px solid #e7b68f; border-top: 0; border-radius: 0 0 10px 10px; display: flex; align-items: center; justify-content: space-between; padding: 0 22px 9px; color: #bc6229; }
+.flow-return > span { font-size: 24px; line-height: 1; }
+.flow-return p { font-size: 12px; margin: 8px 0 0; font-weight: 600; text-align: center; }
+.flow-return i { font-style: normal; padding: 0 12px; color: #d2a27d; }
+.flow-caption { text-align: center; padding: 12px 18px; margin: 22px 0 0; background: #bf5b25; color: white; font-size: 13px; line-height: 1.9; border-radius: 3px; }
+.overview-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.highlights-section { padding: 65px 0; }
+.highlight-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.highlight-grid article { border: 1px solid var(--research-line); padding: 24px 20px; border-radius: 4px; }
+.highlight-grid h3 { font-size: 18px; margin-top: 16px; }
+.highlight-grid article > p { min-height: 48px; }
+.highlight-case { border-top: 1px solid var(--research-line); margin-top: 22px; padding-top: 19px; }
+.highlight-case strong { display: block; font-size: 12px; line-height: 1.8; margin-bottom: 10px; color: #a54c1d; }
+.highlight-case p { min-height: 115px; }
+.highlight-case .text-link { font-size: 11px; margin-top: 15px; }
+.footer-column { min-width: 0; overflow-wrap: anywhere; }
+.feature-section .section-heading > h2::before { content: '主要功能 / '; font-size: .7em; color: #ac5528; }
+@media (max-width: 1150px) {
+  .research-flow { grid-template-columns: 1fr; gap: 18px; }
+  .flow-agent { display: grid; grid-template-columns: auto auto 1fr; gap: 10px 18px; text-align: left; }
+  .flow-agent > .status-label { grid-column: 1 / -1; justify-self: start; }
+  .flow-agent > svg, .flow-agent h2 { margin: 0; }
+  .flow-agent p { text-align: left; }
+  .flow-agent-note { grid-column: 1 / -1; justify-self: start; padding-top: 0; }
+  .flow-return { width: 100%; }
+  .highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .highlight-case p { min-height: 70px; }
+}
+@media (max-width: 700px) {
+  .overview-hero { padding-top: 36px; }
+  .overview-purpose { font-size: 20px; }
+  .overview-intro { font-size: 12px; margin-bottom: 25px; }
+  .flow-stages { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .flow-stage:nth-child(3) .flow-arrow { display: none; }
+  .flow-stage h2 { font-size: 14px; }
+  .flow-stage ul { gap: 8px; }
+  .flow-en { font-size: 6px; }
+  .flow-stage li { font-size: 9px; }
+  .flow-stage { padding: 12px 7px; }
+  .flow-arrow { right: -13px; }
+  .flow-return { padding: 0 12px 9px; }
+  .flow-return p { font-size: 10px; }
+  .flow-return i { padding: 0 4px; }
+  .flow-caption { font-size: 11px; }
+  .highlight-grid { grid-template-columns: 1fr; gap: 16px; }
+  .highlight-grid article:last-child { grid-column: auto; display: block; }
+  .highlight-grid article:last-child h3 { margin-top: 16px; }
+  .highlight-grid article > p, .highlight-case p { min-height: 0; }
+  .highlight-case { margin-top: 16px; padding-top: 16px; }
+}
