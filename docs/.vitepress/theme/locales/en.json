@@ -396,7 +396,7 @@
   "真实实验再验证与数据回流": "Experimental revalidation and data feedback",
   "CONTACT / 联系我们": "CONTACT",
   "让问题与建议，找到我们。": "Send us your questions and suggestions.",
-  "软件问题、使用建议与合作咨询，可通过以下官方渠道联系 Nebula Lab。": "Use the official channels below for issues, suggestions and collaboration inquiries.",
+  "软件问题与使用建议，可通过 GitHub Issues 反馈给 Nebula Lab。Issues 内容公开可见，请勿提交未发表的实验数据或商务信息。": "Report issues and suggestions to Nebula Lab through GitHub Issues. Issues are public, so do not post unpublished research data or business information.",
   "GitHub Issues · 官方反馈渠道": "GitHub Issues · official feedback channel",
   "提交软件问题与功能建议，查看已有讨论和处理进展。提供软件版本、复现步骤及必要的错误信息，方便定位问题。": "Report issues and feature requests, browse discussions and follow progress. Include the software version, reproduction steps and relevant error details.",
   "报告问题与提出建议": "Report issues and suggest improvements",

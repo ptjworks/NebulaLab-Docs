@@ -36,7 +36,7 @@ export const pageContent: Record<PageKind, { eyebrow: string; title: string; int
     { id: 'llm-rag', title: 'LLM+RAG知识助手', text: '让人更高效地使用已有知识，检索相关实验数据与相似实验方案，整理专业领域的实验方案报告。', points: ['专业数据库检索', '来源引用与相似方案', '研究者审阅报告'], badge: '规划中', href: '/manual/llm-rag', action: '阅读建设方向' },
     { id: 'ml-agent', title: 'ML材料智能体', text: '从数据中学习规律，开发与验证领域模型，支持性能预测、虚拟筛选、多目标优化与逆向设计。', points: ['性能预测与模型验证', '候选材料筛选和方案设计', '真实实验再验证与数据回流'], badge: '规划中', href: '/manual/ml-agent', action: '阅读建设方向' }
   ] },
-  contact: { eyebrow: 'CONTACT / 联系我们', title: '让问题与建议，找到我们。', intro: '软件问题、使用建议与合作咨询，可通过以下官方渠道联系 Nebula Lab。', sections: [
+  contact: { eyebrow: 'CONTACT / 联系我们', title: '让问题与建议，找到我们。', intro: '软件问题与使用建议，可通过 GitHub Issues 反馈给 Nebula Lab。Issues 内容公开可见，请勿提交未发表的实验数据或商务信息。', sections: [
     { id: 'github', title: 'GitHub Issues · 官方反馈渠道', text: '提交软件问题与功能建议，查看已有讨论和处理进展。提供软件版本、复现步骤及必要的错误信息，方便定位问题。', points: ['报告问题与提出建议', '查询公开反馈进展', '使用脱敏样例说明问题'], href: 'https://github.com/TshyGO/NebulaLab-Releases/issues', action: '前往 GitHub Issues' }
   ] },
   support: { eyebrow: 'HELP CENTER / 帮助中心', title: '按模块学习，按模板复用。', intro: '学习资源提供各模块操作步骤，社区介绍数据处理模板及使用方法。现阶段可阅读文档，教学视频将在准备完成后补充。', sections: [
