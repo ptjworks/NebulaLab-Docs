@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { useNebulaPreferences, type NebulaLanguage } from '../composables/preferences'
 
-const { language, setLanguage, initPreferences, labels, searchTranslations } = useNebulaPreferences()
+const { language, setLanguage, initPreferences, labels } = useNebulaPreferences()
 const languageMenu = ref<HTMLDetailsElement | null>(null)
 const languageOptions: Array<{ code: NebulaLanguage; short: string; label: string }> = [
   { code: 'en', short: 'EN', label: 'English' },
@@ -11,7 +11,6 @@ const languageOptions: Array<{ code: NebulaLanguage; short: string; label: strin
 
 onMounted(() => {
   initPreferences()
-  applySearchButtonLabel()
   document.addEventListener('click', closeLanguageMenuOnOutsideClick)
 })
 
@@ -19,27 +18,11 @@ onUnmounted(() => {
   document.removeEventListener('click', closeLanguageMenuOnOutsideClick)
 })
 
-watch(language, () => nextTick(applySearchButtonLabel), { immediate: true })
-
 function chooseLanguage(nextLanguage: NebulaLanguage) {
   setLanguage(nextLanguage)
   if (languageMenu.value) {
     languageMenu.value.open = false
   }
-}
-
-function applySearchButtonLabel() {
-  if (typeof document === 'undefined') return
-
-  const buttonText = searchTranslations.value.button.buttonText
-  const buttonAriaLabel = searchTranslations.value.button.buttonAriaLabel
-
-  document.querySelectorAll<HTMLButtonElement>('.DocSearch-Button').forEach((button) => {
-    button.setAttribute('aria-label', buttonAriaLabel)
-  })
-  document.querySelectorAll<HTMLElement>('.DocSearch-Button-Placeholder').forEach((placeholder) => {
-    placeholder.textContent = buttonText
-  })
 }
 
 function closeLanguageMenuOnOutsideClick(event: MouseEvent) {

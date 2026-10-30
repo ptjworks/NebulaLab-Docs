@@ -1,11 +1,9 @@
-# 教程
+<script setup>
+import LearningResources from '../.vitepress/theme/components/LearningResources.vue'
+</script>
 
-教程会用具体场景带你完成 Nebula Lab 的常见操作。
+# 学习资源
 
-当前计划补充：
+按产品的六类功能查找操作文档与对应视频。实验数据收集包含七个操作环节；视频待拍摄，上传后会在同名模块提供播放。尚在建设的功能先说明预期流程。
 
-- 完成一次基础数据处理。
-- 保存并复用工作流模板。
-- 使用社区资源。
-- 导出图谱和结果。
-- 结合实际实验数据的案例教程。
+<LearningResources />
